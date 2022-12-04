@@ -1,6 +1,6 @@
 # Room1SortProject
 
-## Collaborotors:
+## Collaborators:
 ### mdahirr
 ### MissMatilde
 ### SAlighan07
