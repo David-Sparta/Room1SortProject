@@ -40,5 +40,11 @@ namespace SortProject
         {
             return RandomGenerator.GetRandomArray(size);
         }
+
+        internal static int[] RequestSort(int[] array)
+        {
+            var bubbleSort = new BubbleSort();
+            return bubbleSort.Sort(array);
+        }
     }
 }

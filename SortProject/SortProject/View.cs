@@ -36,6 +36,10 @@ namespace SortProject
             //var arr = new int[size];
             var array = Controller.RequestArray(size);
             RandomGenerator.show(array);
+
+            Controller.RequestSort(array);
+
+            RandomGenerator.show(array);
         }
     }
 }
