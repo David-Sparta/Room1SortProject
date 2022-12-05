@@ -39,10 +39,22 @@ namespace SortProject
             Console.WriteLine("Unsorted Array:");
             RandomGenerator.show(array);
 
+            // get time
+            long timeBefore, timeAfter, lengthOfTime;
+            
+            timeBefore = DateTime.Now.Ticks;
             Controller.RequestSort(array);
+            timeAfter = DateTime.Now.Ticks;
+
+            lengthOfTime = timeAfter - timeBefore;            
+
+            TimeSpan duration = new TimeSpan(lengthOfTime);
+            double seconds = duration.TotalMinutes;
 
             Console.WriteLine("Sorted Array:");
             RandomGenerator.show(array);
+
+            Console.WriteLine($"The sorting algorithm took {seconds} to complete.");
         }
     }
 }
