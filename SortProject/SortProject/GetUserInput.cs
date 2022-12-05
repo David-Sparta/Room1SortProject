@@ -47,9 +47,10 @@ namespace SortProject
                 Console.WriteLine("B = BubbleSort\nM = MergeSort\nL = NET Library Sort");
 
                 answer = Console.ReadKey().KeyChar;
+                Char.ToLower(answer);
 
             }
-
+           
             return answer;            
         }
 
