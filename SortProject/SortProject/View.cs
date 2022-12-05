@@ -43,7 +43,12 @@ namespace SortProject
             long timeBefore, timeAfter, lengthOfTime;
             
             timeBefore = DateTime.Now.Ticks;
-            Controller.RequestSort(array);
+
+            if (SortingMethod == 'b')
+            {
+                Controller.RequestBubbleSort(array);
+            }
+            
             timeAfter = DateTime.Now.Ticks;
 
             lengthOfTime = timeAfter - timeBefore;            

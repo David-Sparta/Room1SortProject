@@ -41,7 +41,7 @@ namespace SortProject
             return RandomGenerator.GetRandomArray(size);
         }
 
-        internal static int[] RequestSort(int[] array)
+        internal static int[] RequestBubbleSort(int[] array)
         {
             var bubbleSort = new BubbleSort();
             return bubbleSort.Sort(array);
