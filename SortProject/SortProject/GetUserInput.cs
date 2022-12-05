@@ -16,7 +16,14 @@ namespace SortProject
             {
                 string temp;
                 Console.WriteLine("Choose an array length");
-                temp = Console.ReadLine();
+                try
+                {
+                    temp = Console.ReadLine();
+                }
+                catch(Exception)
+                {
+                    continue;
+                }                
 
                 if(int.TryParse(temp, out answer))
                 {
@@ -36,7 +43,8 @@ namespace SortProject
             {
                 Console.WriteLine("Choose a Sorting Method");
                 Console.WriteLine("B = BubbleSort\nM = MergeSort\nL = NET Library Sort");
-                answer = Console.ReadLine().ToLower()[0];
+
+                answer = Console.ReadKey().KeyChar;
 
             }
 
