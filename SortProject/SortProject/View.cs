@@ -29,7 +29,18 @@ namespace SortProject
 
         static void Main(string[] args)
         {
-           
+            // get user input
+            char SortingMethod;
+            int size;
+
+            SortingMethod = GetUserInput.SortingMethod();
+
+            Console.WriteLine($"Method chosen: {SortingMethod}");
+
+            size = GetUserInput.GetSize();
+
+            Console.WriteLine($"Array Length = {size}");
+
         }
     }
 }
