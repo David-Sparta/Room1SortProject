@@ -22,7 +22,7 @@ namespace SortProjectTests
         public void GivenANullArray_Sort_ThrowsAnException()
         {
             int[] array = null;
-            Assert.That(() => _bubble.Sort(array), Throws.TypeOf<ArgumentNullException>());
+            Assert.That(() => _bubble.Sort(array), Throws.TypeOf<NullReferenceException>());
         }
 
         [Test]
