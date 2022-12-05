@@ -49,10 +49,10 @@ namespace SortProjectTests
             int[] left = { 1, 3, 5 };
             int[] right = { 7, 9, 12 };
 
-            //var size = _merge.MergeSort(left, right).Length;
+            var size = _merge.SortMulti(left, right).Length;
             int expectedSize = 6;
 
-            //Assert.That(size, Is.EqualTo(expectedSize));
+            Assert.That(size, Is.EqualTo(expectedSize));
         }
 
         [Test]
@@ -63,10 +63,10 @@ namespace SortProjectTests
             int[] left = { 10, 3 };
             int[] right = { 7, 12 };
 
-            //var result = _merge.MergeSort(left, right);
+            var result = _merge.SortMulti(left, right);
             int[] expected = { 7, 10, 3, 12 };
 
-            //Assert.That(result, Is.EqualTo(expected));
+            Assert.That(result, Is.EqualTo(expected));
         }
     }
 }
