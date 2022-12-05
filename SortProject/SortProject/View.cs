@@ -4,70 +4,83 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SortProject
-{
-    public class View
-    {
+namespace SortProject {
+    public class View {
         SortAlgorithm _sortAlgorithm;
 
-        SortAlgorithm SortAlgorithm
-        {
-            get
-            {
+        SortAlgorithm SortAlgorithm {
+            get {
                 return _sortAlgorithm;
             }
-            set
-            {
+            set {
                 _sortAlgorithm = value;
             }
         }
 
-        public View(SortAlgorithm sortAlgorithm)
-        {
+        public View( SortAlgorithm sortAlgorithm ) {
             _sortAlgorithm = sortAlgorithm;
         }
 
-        static void Main(string[] args)
-        {
+        static void Main( string[] args ) {
             // get user input
             char SortingMethod = GetUserInput.SortingMethod();
-            int size = GetUserInput.GetSize();
+            if ( SortingMethod == 'm' ) {
 
-            //var arr = new int[size];
-            var array = Controller.RequestArray(size);
+                int size1 = GetUserInput.GetSize();
+                int size2 = GetUserInput.GetSize();
 
-            Console.WriteLine("Unsorted Array:");
-            RandomGenerator.show(array);
+                var arr1 = Controller.RequestArray( size1 );
+                var arr2 = Controller.RequestArray( size2 );
 
-            // get time
-            long timeBefore, timeAfter, lengthOfTime;
-            
-            timeBefore = DateTime.Now.Ticks;
+                var sortedArr = Controller.RequestSort( arr1, arr2 );
 
-            if (SortingMethod == 'b')
-            {
-                Controller.RequestBubbleSort(array);
+
+                Console.WriteLine( "Array 1" );
+                RandomGenerator.show( arr1 );
+                Console.WriteLine();
+                Console.WriteLine( "Array 2" );
+                RandomGenerator.show( arr2 );
+                Console.WriteLine();
+                Console.WriteLine( "Sorted Array" );
+                RandomGenerator.show( sortedArr );
+
             }
-            else if (SortingMethod == 'm')
-            {
-                
+            else {
+                int size = GetUserInput.GetSize();
+
+                //var arr = new int[size];
+                var array = Controller.RequestArray( size );
+
+                Console.WriteLine( "Unsorted Array:" );
+                RandomGenerator.show( array );
+
+                // get time
+                long timeBefore, timeAfter, lengthOfTime;
+
+                timeBefore = DateTime.Now.Ticks;
+
+                if ( SortingMethod == 'b' ) {
+                    Controller.RequestBubbleSort( array );
+                }
+                else if ( SortingMethod == 'm' ) {
+
+                }
+                else if ( SortingMethod == 'l' ) {
+                    Controller.RequestLibrarySort( array );
+                }
+
+                timeAfter = DateTime.Now.Ticks;
+
+                lengthOfTime = timeAfter - timeBefore;
+
+                TimeSpan duration = new TimeSpan( lengthOfTime );
+                double seconds = duration.TotalMinutes;
+
+                Console.WriteLine( "Sorted Array:" );
+                RandomGenerator.show( array );
+
+                Console.WriteLine( $"The sorting algorithm took {seconds} to complete." );
             }
-            else if (SortingMethod == 'l')
-            {
-                Controller.RequestLibrarySort(array);
-            }
-            
-            timeAfter = DateTime.Now.Ticks;
-
-            lengthOfTime = timeAfter - timeBefore;            
-
-            TimeSpan duration = new TimeSpan(lengthOfTime);
-            double seconds = duration.TotalMinutes;
-
-            Console.WriteLine("Sorted Array:");
-            RandomGenerator.show(array);
-
-            Console.WriteLine($"The sorting algorithm took {seconds} to complete.");
         }
     }
 }
