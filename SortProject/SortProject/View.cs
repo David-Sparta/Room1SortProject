@@ -34,13 +34,8 @@ namespace SortProject
             int size = GetUserInput.GetSize();
 
             //var arr = new int[size];
-
-            var arr = RandomGenerator.GetRandomArray(size);
-
-            RandomGenerator.show(arr);
-
-            
-
+            var array = Controller.RequestArray(size);
+            RandomGenerator.show(array);
         }
     }
 }

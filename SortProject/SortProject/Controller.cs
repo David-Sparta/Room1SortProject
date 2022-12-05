@@ -38,8 +38,7 @@ namespace SortProject
 
         internal static int[] RequestArray(int size)
         {
-            //Get Random Array of Size
-            return new int[size]; // Inimplemented
+            return RandomGenerator.GetRandomArray(size);
         }
     }
 }
