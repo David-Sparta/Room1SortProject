@@ -35,5 +35,11 @@ namespace SortProject
             _sortAlgorithm = sortAlgorithm;
             _view = view;
         }
+
+        internal static int[] RequestArray(int size)
+        {
+            //Get Random Array of Size
+            return new int[size]; // Inimplemented
+        }
     }
 }
