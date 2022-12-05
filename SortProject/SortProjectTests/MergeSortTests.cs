@@ -43,7 +43,7 @@ namespace SortProjectTests
             Assert.That(_merge.Sort(num), Is.EqualTo(expected));
         }
 
-        [Ignore("Not Yet Implemented Uncomment Lines When Implemented")]
+        [Test]
         public void Given2Arrays_Merge_ReturnCorrectSize()
         {
             int[] left = { 1, 3, 5 };
@@ -56,8 +56,6 @@ namespace SortProjectTests
         }
 
         [Test]
-
-        [Ignore("Not Yet Implemented Uncomment Lines When Implemented")]
         public void Given2ArraysOfSize2_Merge_ReturnCorrectArray()
         {
             int[] left = { 10, 3 };
