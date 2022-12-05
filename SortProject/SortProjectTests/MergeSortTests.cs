@@ -23,7 +23,8 @@ namespace SortProjectTests
         public void GivenANullArray_Sort_ThrowsAnException()
         {
             int[] array = null;
-            Assert.That(() => _merge.Sort(array), Throws.TypeOf<ArgumentNullException>());
+            int[] array2 = null;
+            Assert.That(() => _merge.SortMulti(array, array2), Throws.TypeOf<ArgumentNullException>());
         }
 
         [Test]

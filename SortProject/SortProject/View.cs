@@ -32,6 +32,11 @@ namespace SortProject {
                 var arr1 = Controller.RequestArray( size1 );
                 var arr2 = Controller.RequestArray( size2 );
 
+                // get time
+                long timeBefore, timeAfter, lengthOfTime;
+
+                timeBefore = DateTime.Now.Ticks;
+
                 var sortedArr = Controller.RequestSort( arr1, arr2 );
 
 
@@ -41,8 +46,18 @@ namespace SortProject {
                 Console.WriteLine( "Array 2" );
                 RandomGenerator.show( arr2 );
                 Console.WriteLine();
-                Console.WriteLine( "Sorted Array" );
-                RandomGenerator.show( sortedArr );
+
+                timeAfter = DateTime.Now.Ticks;
+
+                lengthOfTime = timeAfter - timeBefore;
+
+                TimeSpan duration = new TimeSpan(lengthOfTime);
+                double seconds = duration.TotalMinutes;
+
+                Console.WriteLine("Sorted Array:");
+                RandomGenerator.show(sortedArr);
+
+                Console.WriteLine($"The sorting algorithm took {seconds} to complete.");
 
             }
             else {
@@ -61,9 +76,6 @@ namespace SortProject {
 
                 if ( SortingMethod == 'b' ) {
                     Controller.RequestBubbleSort( array );
-                }
-                else if ( SortingMethod == 'm' ) {
-
                 }
                 else if ( SortingMethod == 'l' ) {
                     Controller.RequestLibrarySort( array );
