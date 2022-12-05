@@ -13,9 +13,9 @@ namespace SortProject
 
         }
 
-        public override int[] Sort()
+        public override int[] Sort(int[] array)
         {
-            return base.Sort();
+            return base.Sort(array);
         }
     }
 }

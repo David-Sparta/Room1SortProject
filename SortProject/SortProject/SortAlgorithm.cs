@@ -13,7 +13,7 @@ namespace SortProject
         
         }
 
-        public virtual int[] Sort()
+        public virtual int[] Sort(int[] array)
         {
             return new int[0];
         }
