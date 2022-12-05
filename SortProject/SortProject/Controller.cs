@@ -46,5 +46,11 @@ namespace SortProject
             var bubbleSort = new BubbleSort();
             return bubbleSort.Sort(array);
         }
+
+        internal static int[] RequestLibrarySort(int[] array)
+        {
+            var librarySort = new BubbleSort();
+            return librarySort.Sort(array);
+        }
     }
 }

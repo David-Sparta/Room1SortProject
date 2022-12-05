@@ -48,6 +48,14 @@ namespace SortProject
             {
                 Controller.RequestBubbleSort(array);
             }
+            else if (SortingMethod == 'm')
+            {
+                
+            }
+            else if (SortingMethod == 'l')
+            {
+                Controller.RequestLibrarySort(array);
+            }
             
             timeAfter = DateTime.Now.Ticks;
 
