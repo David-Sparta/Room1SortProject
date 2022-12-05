@@ -23,24 +23,7 @@ namespace SortProjectTests
         public void GivenANullArray_Sort_ThrowsAnException()
         {
             int[] array = null;
-            Assert.That(() => _merge.Sort(array), Throws.TypeOf<NullReferenceException>());
-        }
-
-        [Test]
-
-        public void GivenArray_Sort_ReturnArraySize()
-        {
-            int[] num = { 2, 4, 6, 8, 10, 12 };
-            Assert.That(_merge.Sort(num).Length, Is.EqualTo(6));
-        }
-
-        [Test]
-
-        public void GivenArray_Sort_ReturnSortedArray()
-        {
-            int[] num = { 4, 6, 2, 12, 3, 5 };
-            int[] expected = { 2, 3, 4, 5, 6, 12 };
-            Assert.That(_merge.Sort(num), Is.EqualTo(expected));
+            Assert.That(() => _merge.Sort(array), Throws.TypeOf<ArgumentNullException>());
         }
 
         [Test]
@@ -62,7 +45,7 @@ namespace SortProjectTests
             int[] right = { 7, 12 };
 
             var result = _merge.SortMulti(left, right);
-            int[] expected = { 7, 10, 3, 12 };
+            int[] expected = { 3, 7, 10, 12 };
 
             Assert.That(result, Is.EqualTo(expected));
         }
