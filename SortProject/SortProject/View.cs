@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace SortProject
 {
@@ -32,11 +33,6 @@ namespace SortProject
             // get user input
             int SortingMethod = GetUserInput.SortingMethod();
             int size = GetUserInput.GetSize();
-
-
-
-            
-
         }
     }
 }
