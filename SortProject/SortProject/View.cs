@@ -57,7 +57,7 @@ namespace SortProject {
                 Console.WriteLine("Sorted Array:");
                 RandomGenerator.show(sortedArr);
 
-                Console.WriteLine($"The sorting algorithm took {seconds} to complete.");
+                Console.WriteLine($"\nThe sorting algorithm took {seconds} to complete.");
 
             }
             else {
@@ -88,10 +88,10 @@ namespace SortProject {
                 TimeSpan duration = new TimeSpan( lengthOfTime );
                 double seconds = duration.TotalMinutes;
 
-                Console.WriteLine( "Sorted Array:" );
+                Console.WriteLine( "\nSorted Array:" );
                 RandomGenerator.show( array );
 
-                Console.WriteLine( $"The sorting algorithm took {seconds} to complete." );
+                Console.WriteLine( $"\nThe sorting algorithm took {seconds} to complete." );
             }
         }
     }

@@ -23,9 +23,11 @@ namespace SortProject
                 catch(Exception)
                 {
                     continue;
-                }                
+                }
 
-                if(int.TryParse(temp, out answer))
+                Console.Clear();
+
+                if (int.TryParse(temp, out answer))
                 {
                     break;
                 }
@@ -48,6 +50,8 @@ namespace SortProject
 
                 answer = Console.ReadKey().KeyChar;
                 Char.ToLower(answer);
+
+                Console.Clear();
 
             }
            
