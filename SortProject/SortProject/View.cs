@@ -30,10 +30,14 @@ namespace SortProject
         static void Main(string[] args)
         {
             // get user input
-            int SortingMethod = GetUserInput.SortingMethod();
+            char SortingMethod = GetUserInput.SortingMethod();
             int size = GetUserInput.GetSize();
 
+            //var arr = new int[size];
 
+            var arr = RandomGenerator.GetRandomArray(size);
+
+            RandomGenerator.show(arr);
 
             
 

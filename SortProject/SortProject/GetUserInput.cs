@@ -34,6 +34,8 @@ namespace SortProject
             return answer;
         }
 
+
+
         internal static char SortingMethod()
         {
             char answer = '0';
@@ -50,5 +52,9 @@ namespace SortProject
 
             return answer;            
         }
+
+
+
+
     }// end of class
 }// end of namespace
