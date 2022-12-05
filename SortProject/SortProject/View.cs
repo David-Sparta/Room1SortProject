@@ -35,10 +35,13 @@ namespace SortProject
 
             //var arr = new int[size];
             var array = Controller.RequestArray(size);
+
+            Console.WriteLine("Unsorted Array:");
             RandomGenerator.show(array);
 
             Controller.RequestSort(array);
 
+            Console.WriteLine("Sorted Array:");
             RandomGenerator.show(array);
         }
     }
