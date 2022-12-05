@@ -32,5 +32,14 @@ namespace SortProjectTests
             int[] num = { 2, 4, 6, 8, 10, 12 };
             Assert.That(_bubble.Sort(num).Length, Is.EqualTo(6));
         }
+
+        [Test]
+
+        public void GivenArray_Sort_ReturnSortedArray()
+        {
+            int[] num = { 4, 6, 2, 12, 3, 5 };
+            int[] expected = { 2, 3, 4, 5, 6, 12 };
+            Assert.That(_bubble.Sort(num), Is.EqualTo(expected));
+        }
     }
 }
